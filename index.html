@@ -390,11 +390,11 @@
             <div class="subscribe-box">
                 <b class="subscribe">Подпишитесь на рассылку</b>
                 <form class="subscribe-form">
-                    <input class="subscribe-email" type="email" name="subscribe-email" id="" placeholder="E-mail">
+                    <input class="subscribe-email" type="email" name="subscribe-email" id="" placeholder="E-mail" autocomplete="off">
                     <button class="sbc-button" type="submit">
                         Подписаться
-                        <svg>
-                            <use href=""></use>
+                        <svg class="sbc-icon">
+                            <use href="./images/sprite.svg#icon-send"></use>
                         </svg>
                     </button>
                 </form>
@@ -403,13 +403,50 @@
         </div>
     </footer>  
 
-    <div class="backdrop is-hidden" data-modal>
+     <div class="backdrop" data-modal> 
         <div class="modal">
             <button class="modal-close-btn" data-modal-close>
                 <svg class="close-icon">
                     <use href="./images/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+
+            <div class="form-box">
+                <b class="data-title">Оставьте свои данные, мы вам перезвоним</b>
+                <form class="data-form">
+                    <label class="label user-name">
+                        Имя
+                        <input class="input-area" type="text" name="user-name">
+                        <svg class="data-icon icon-person">
+                            <use href="./images/sprite.svg#icon-person"></use>
+                        </svg>
+                    </label>
+                    <label class="label user-phone">
+                        Телефон
+                        <input class="input-area" type="tel" name="user-phone">
+                        <svg class="data-icon icon-telephone">
+                            <use href="./images/sprite.svg#icon-telephone"></use>
+                        </svg>
+                    </label>
+                    <label class="label user-email">
+                        Почта
+                        <input class="input-area" type="email" name="user-email">
+                        <svg class="data-icon icon-telephone">
+                            <use href="./images/sprite.svg#icon-email"></use>
+                        </svg>
+                    </label>
+                    <label class="label">
+                        Комментарий
+                        <textarea class="input-area comment" name="user-comments" placeholder="Введите текст"></textarea>
+                    </label>
+                    <input class="agreement-check" type="checkbox" name="agreement" value="agreement" id="agreement">
+                    <label class="agreement" for="agreement">Соглашаюсь с рассылкой и принимаю 
+                        <a class="agreement-link" href="">Условия договора</a>
+                    </label>
+                    <button class="data-button" type="submit">Отправить</button>
+                </form>
+            </div>
+
         </div>
     </div>
 
