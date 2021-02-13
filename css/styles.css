@@ -1006,9 +1006,8 @@ img {
     outline: none;
 } */
 
-.agreement-check:focus + .agreement::before {
+.agreement-check:focus + .agreement::before { 
     background-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(33, 33, 33, 0.2);
     border: none;
     background-image: url(../images/checked.svg);
     fill: var(--white-color);
