@@ -57,7 +57,7 @@
         <!-- Особенности -->
         <section class="features">
             <div class="container">
-                <h2 hidden class="section-title">Особенности</h2>
+                <h2 class="section-title visually-hidden">Особенности</h2>
                 <ul class="feature-list">
                     <li class="feature-list-item antenna list">
                         <div class="features-img-bcg">
@@ -414,35 +414,44 @@
             <div class="form-box">
                 <b class="data-title">Оставьте свои данные, мы вам перезвоним</b>
                 <form class="data-form">
-                    <label class="label user-name">
+                    <label class="label">
                         Имя
-                        <input class="input-area" type="text" name="user-name">
-                        <svg class="data-icon icon-person">
-                            <use href="./images/sprite.svg#icon-person"></use>
-                        </svg>
+                        <span class="input-wrap">
+                            <input class="input-area" type="text" name="user-name">
+                            <svg class="data-icon">
+                                <use href="./images/sprite.svg#icon-person"></use>
+                            </svg>
+                        </span>
                     </label>
-                    <label class="label user-phone">
+                    <label class="label">
                         Телефон
-                        <input class="input-area" type="tel" name="user-phone">
-                        <svg class="data-icon icon-telephone">
-                            <use href="./images/sprite.svg#icon-telephone"></use>
-                        </svg>
+                        <span class="input-wrap">
+                            <input class="input-area" type="tel" name="user-phone">
+                            <svg class="data-icon">
+                                <use href="./images/sprite.svg#icon-telephone"></use>
+                            </svg>
+                        </span>
                     </label>
-                    <label class="label user-email">
+                    <label class="label">
                         Почта
-                        <input class="input-area" type="email" name="user-email">
-                        <svg class="data-icon icon-telephone">
-                            <use href="./images/sprite.svg#icon-email"></use>
-                        </svg>
+                        <span class="input-wrap">
+                            <input class="input-area" type="email" name="user-email">
+                            <svg class="data-icon">
+                                <use href="./images/sprite.svg#icon-email"></use>
+                            </svg>
+                        </span>
                     </label>
                     <label class="label">
                         Комментарий
                         <textarea class="input-area comment" name="user-comments" placeholder="Введите текст"></textarea>
                     </label>
-                    <input class="agreement-check" type="checkbox" name="agreement" value="agreement" id="agreement">
-                    <label class="agreement" for="agreement">Соглашаюсь с рассылкой и принимаю 
-                        <a class="agreement-link" href="">Условия договора</a>
-                    </label>
+                    <div class="agreement-wrap">
+                        <input class="agreement-check visually-hidden" type="checkbox" name="agreement" value="agreement" id="agreement">
+                        <label class="agreement" for="agreement">Соглашаюсь с рассылкой и принимаю&nbsp; 
+                          <a class="agreement-link" href="">Условия договора</a>
+                        </label>
+                    </div>
+                    
                     <button class="data-button" type="submit">Отправить</button>
                 </form>
             </div>

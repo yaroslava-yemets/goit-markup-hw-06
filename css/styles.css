@@ -60,6 +60,18 @@ img {
     margin: 0 auto;
 }
 
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px 1px 1px 1px);
+    padding: 0 !important;
+    border: 0 o !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+
 /* ======GENERAL======= */
 
 .section-title {
@@ -668,11 +680,6 @@ img {
     fill: var(--white-color);
 }
 
-/* .sbc-icon {
-    fill: var(--white-color);
-    background-size: cover;
-} */
-
 /* ======PORTFOLIO======= */
 
 /* ======BUTTONS======= */
@@ -900,6 +907,10 @@ img {
     color: var(--text-color);
 }
 
+.input-wrap {
+    position: relative;
+}
+
 .input-area {
     width: 448px;
     height: 40px;
@@ -908,31 +919,17 @@ img {
     margin-top: 4px;
     margin-bottom: 10px;
     padding-left: 42px;
-    outline: none;
     transition: border-color 250ms var(--cubic);
 }
 
 .input-area:focus {
     border-color: var(--accent-color);
+    outline: none;
 }
 
 .input-area:focus + .data-icon{
     fill: var(--accent-color);
 
-}
-
-.user-name,
-.user-phone,
-.user-email {
-    position: relative;
-}
-
-.icon-person,
-.icon-telephone,
-.icon-email {
-    position: absolute;
-    top: 29px;
-    left: 12px;
 }
 
 .data-icon {
@@ -941,6 +938,11 @@ img {
     height: 18px;
     fill: var(--emphasis-color);
     transition: fill 250ms var(--cubic);
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
 }
 
 .comment {
@@ -964,6 +966,9 @@ img {
 }
 
 .agreement {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -978,6 +983,35 @@ img {
     color: var(--accent-color);
 }
 
+
+.agreement::before {
+    content: '';
+    display: block;
+    width: 100%;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--emphasis-color);
+    border-radius: 3px;
+    margin-right: 7px;
+    transition: background-color 250ms var(--cubic),
+    fill 250ms var(--cubic),
+    box-shadow 250ms var(--cubic),
+    border 250ms var(--cubic);
+}
+
+/* .agreement-check:focus,
+.agreement-check:checked {
+    outline: none;
+} */
+
+.agreement-check:focus + .agreement::before {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(33, 33, 33, 0.2);
+    border: none;
+    background-image: url(../images/checked.svg);
+    fill: var(--white-color);
+}
+
 .data-button {
     align-self: center;
     width: 200px;
@@ -988,7 +1022,6 @@ img {
     line-height: 1.87;
     letter-spacing: 0.06em;
     color: var(--white-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background-color: var(--accent-color);
     border: none;
@@ -998,17 +1031,5 @@ img {
 .data-button:hover,
 .data-button:focus {
     background-color: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-.agreement::after {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--emphasis-color);
-    border-radius: 3px;
-}
-
-
-16 15 
-212121 color chaeck
