@@ -977,6 +977,7 @@ img {
     letter-spacing: 0.03em;
     color: var(--text-color);
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .agreement-link {
@@ -997,6 +998,7 @@ img {
     fill 250ms var(--cubic),
     box-shadow 250ms var(--cubic),
     border 250ms var(--cubic);
+    cursor: pointer;
 }
 
 /* .agreement-check:focus,
